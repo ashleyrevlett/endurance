@@ -20,9 +20,9 @@ public class NameGenerator
 
 		firstNames = new List<string> (loadData ("Assets/data/names-first.csv"));
 		lastNames = new List<string> (loadData ("Assets/data/names-last.csv"));
-
-		Debug.Log("firstNames: " + firstNames.Count);
-		Debug.Log("lastNames: " + lastNames.Count);
+//
+//		Debug.Log("firstNames: " + firstNames.Count);
+//		Debug.Log("lastNames: " + lastNames.Count);
 
 	}
 

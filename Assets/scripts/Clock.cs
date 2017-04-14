@@ -15,6 +15,10 @@ public class Clock : MonoBehaviour {
 		date = Convert.ToDateTime(iDate);
 	}
 
+	public DateTime getDate() {
+		return date;
+	}
+
 	void AdvanceTime(int hours) {
 		TimeSpan time = new TimeSpan(1, 0, 0);
 		date = date.Add(time);

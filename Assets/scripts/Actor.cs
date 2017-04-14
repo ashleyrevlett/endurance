@@ -45,7 +45,7 @@ public class Actor : MonoBehaviour {
 
 
 	public void randomize(NameGenerator namer) {
-		// randomize stat values
+		// #TODO change random to bell curve distribution
 		spirit = Random.Range(0, 100);
 		endurance = Random.Range(0, 100);
 		skill = Random.Range(0, 100);
@@ -54,8 +54,10 @@ public class Actor : MonoBehaviour {
 		lastName = randomName [1];
 	}
 
+
 	public string getFullName() {
 		return string.Format ("{0} {1}", firstName, lastName);
 	}
+
 
 }
