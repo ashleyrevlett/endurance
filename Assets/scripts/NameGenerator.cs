@@ -9,6 +9,7 @@ public class NameGenerator
 
 	List<string> firstNames;
 	List<string> lastNames;
+	List<string> shipNames;
 
 	private string[] loadData (string filePath) {
 		string fileData = System.IO.File.ReadAllText (filePath);
@@ -17,10 +18,10 @@ public class NameGenerator
 	}
 
 	public NameGenerator () {
-
 		firstNames = new List<string> (loadData ("Assets/data/names-first.csv"));
 		lastNames = new List<string> (loadData ("Assets/data/names-last.csv"));
-//
+		shipNames = new List<string> (loadData ("Assets/data/names-ship.csv"));
+
 //		Debug.Log("firstNames: " + firstNames.Count);
 //		Debug.Log("lastNames: " + lastNames.Count);
 
@@ -35,6 +36,10 @@ public class NameGenerator
 	string randomName(List<string> namesList) {
 		int index = UnityEngine.Random.Range(0, namesList.Count);
 		return namesList [index];
+	}
+
+	public string randomShipName() {
+		return randomName(shipNames);
 	}
 
 }

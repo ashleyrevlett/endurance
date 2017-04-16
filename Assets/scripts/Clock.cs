@@ -35,10 +35,10 @@ public class Clock : MonoBehaviour {
 		}
 	}
 
-	void OnGUI() {
-		string date_text = date.ToString ("F");
-		GUI.Label (new Rect (32, 32, 256, 32), date_text);
-	}
+//	void OnGUI() {
+//		string date_text = date.ToString ("F");
+//		GUI.Label (new Rect (32, 32, 256, 32), date_text);
+//	}
 
 
 }
