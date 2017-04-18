@@ -367,6 +367,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1931352856299888, guid: 8158ecc09af35493a9ea0de05fa4b8ba,
         type: 2}
+    - target: {fileID: 114349625389488168, guid: ebc5c11f4021545308db68c904c6101e,
+        type: 2}
+      propertyPath: guiFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 5a261389b4e414ca78512705ceb9e4e4,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebc5c11f4021545308db68c904c6101e, type: 2}
   m_IsPrefabParent: 0

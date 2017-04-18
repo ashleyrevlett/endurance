@@ -5,26 +5,26 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject crewMemberPrefab;
-	public GameObject shipPrefab;
-
 	[Range(1, 50)]
 	public int totalCrew = 10;
 
-	NameGenerator namer = new NameGenerator();
+	public GameObject crewMemberPrefab;
+	public GameObject shipPrefab;
+	public Font guiFont;
 
+	NameGenerator namer = new NameGenerator();
 	Actor playerActor;
 	List<Actor> crewMembers = new List<Actor>();
 	Clock gameClock;
-
-	private int totalShips = 4;
+	int totalShips = 4;
 	List<Ship> ships = new List<Ship>();
 	Ship mainShip;
-
 	GUIStyle style = new GUIStyle();
-	public Font guiFont;
+	int gameSpeed;
 	//	Board board;
 	//  storyevents
+
+
 
 
 	void Start () {
@@ -88,12 +88,8 @@ public class GameController : MonoBehaviour {
 
 		string msg;
 
-		// print time
-		msg = gameClock.getDate ().ToString ();
-		msg += "\n\n";
-
 		// print player
-		msg += string.Format ("{0}   SPR {1}\tEND {2}\t SKL {3}\t{4}", playerActor.getFullName (), playerActor.spirit, playerActor.endurance, playerActor.skill, playerActor.getShip());
+		msg = string.Format ("{0}   SPR {1}\tEND {2}\t SKL {3}\t{4}", playerActor.getFullName (), playerActor.spirit, playerActor.endurance, playerActor.skill, playerActor.getShip());
 
 		// print crew
 		for (int i=0; i < crewMembers.Count; i++) {
@@ -120,13 +116,8 @@ public class GameController : MonoBehaviour {
 	void OnGUI () {
 		
 		// Make a background box
-		GUI.Box(new Rect(10,10,Screen.width-20, Screen.height-20), getState(), style);
+		GUI.Box(new Rect(10,100,Screen.width-20, Screen.height-20), getState(), style);
 
-//
-//		// Make the second button.
-//		if(GUI.Button(new Rect(20,70,80,20), "Level 2")) {
-//			Application.LoadLevel(2);
-//		}
 	}
 
 
